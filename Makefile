@@ -1,4 +1,4 @@
 .PHONY: test
 test:
-	1echo "a" \
-		|| echo >&2 "kind n"
+	echo "a" \
+		|| { echo >&2 "kind n"; exit 1; } && echo "successful"
